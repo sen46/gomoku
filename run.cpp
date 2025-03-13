@@ -3,6 +3,7 @@
 int run(t_board &board)
 {
     int flag = 1;
+    print_board(board);
     while (true)
     {
         if (flag)
