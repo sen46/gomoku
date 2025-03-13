@@ -1,3 +1,5 @@
+How to play ? 
+
 ```sh
 g++ *.cpp # compile
 ```
