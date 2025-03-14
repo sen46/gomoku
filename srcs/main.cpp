@@ -21,6 +21,9 @@ int main()
 
     board.sz = stoi(s);
     init_board(board);
-    run(board);
+    if (run(board))
+    {
+        cout << "ゲームは正常に終了しました。\n";
+    }
     return (0);
 }

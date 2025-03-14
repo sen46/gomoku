@@ -3,8 +3,14 @@
 int run(t_board &board)
 {
     int flag = 1;
+    int cnt = 0;
     while (true)
     {
+        if (cnt == board.sz * board.sz)
+        {
+            cout << "ゲームは引き分けです。\n";
+            return (1);
+        }
         print_board(board);
         set<pair<int, int>> st;
         if (flag)
@@ -48,6 +54,7 @@ int run(t_board &board)
             }
         }
         flag = 1 - flag;
+        cnt++;
     }
     return (1);
 }
