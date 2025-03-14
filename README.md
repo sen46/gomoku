@@ -1,9 +1,11 @@
 Quick play
-1. ```git clone git@github.com:sen46/gomoku.git gomoku```
-2. ```cd gomoku```
-3. ```make all```
+```
+git clone git@github.com:sen46/gomoku.git gomoku
+cd gomoku
+make all
+```
 
-======================================================================================
+=========================================================
 ```sh
 make all && ./gomoku # Compile the game and start playing
 ```
