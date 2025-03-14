@@ -3,6 +3,7 @@ Quick play
 git clone git@github.com:sen46/gomoku.git gomoku
 cd gomoku
 make all
+./gomoku
 ```
 
 =========================================================
