@@ -15,7 +15,12 @@ int board_size_check(string s)
     n = stoi(s);
     if (n > 40)
     {
-        cout << "盤面が大きすぎます。" << endl;
+        cout << "盤面が大きすぎます。サイズは5 ~ 40にしてください\n";
+        return (0);
+    }
+    else if (n < 5)
+    {
+        cout << "盤面が小さすぎます。\n";
         return (0);
     }
     return (1);
