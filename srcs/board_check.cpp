@@ -1,6 +1,6 @@
 #include "../includes/gomoku.h"
 
-int board_check(int i, int j, t_board &board)
+int board_check(int i, int j, t_board &board, set<pair<int, int>> &st)
 {
     for (int di = 0; di < 3; di++)
     {
@@ -31,7 +31,11 @@ int board_check(int i, int j, t_board &board)
                     break;
                 }
             }
-            if (flag) return (1);
+            if (flag)
+            {
+                for (int len = 0; len < 5; len++) st.insert(make_pair(i + dx[di] * len, j + dy[dj] * len));
+                return (1);
+            }
 
         }
     }

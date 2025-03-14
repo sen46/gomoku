@@ -3,9 +3,10 @@
 int run(t_board &board)
 {
     int flag = 1;
-    print_board(board);
     while (true)
     {
+        print_board(board);
+        set<pair<int, int>> st;
         if (flag)
             cout << board.player1;
         else
@@ -31,9 +32,10 @@ int run(t_board &board)
         if (flag) board.map[i][j] = 'o';
         else board.map[i][j] = 'x';
 
-        print_board(board);
-        if (board_check(i, j, board))
+        // print_board(board);
+        if (board_check(i, j, board, st))
         {
+            print_board_color(board, st);
             if (flag)
             {
                 cout << "player1 の勝利です。\n";
