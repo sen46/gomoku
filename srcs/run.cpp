@@ -38,12 +38,12 @@ int run(t_board &board)
             print_board_color(board, st);
             if (flag)
             {
-                cout << "player1 の勝利です。\n";
+                cout << board.player1 << " の勝利です。\n";
                 break;
             }
             else
             {
-                cout << "player2 の勝利です。\n";
+                cout << board.player2 << " の勝利です。\n";
                 break;
             }
         }
