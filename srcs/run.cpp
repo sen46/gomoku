@@ -11,7 +11,7 @@ int run(t_board &board)
             cout << board.player1;
         else
             cout << board.player2;        
-        cout << "の番です。数字を２つ入力してください\n";
+        cout << "の番です。数字（座標）を２つ入力してください\n";
         int i, j;
         string s, t;
         do 
