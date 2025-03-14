@@ -9,6 +9,8 @@ using namespace std;
 
 struct t_board
 {
+    string player1;
+    string player2;
     int sz;
     vector<vector<char>> map;
 };
@@ -16,10 +18,11 @@ struct t_board
 const int dx[3] = {-1, 0, 1};
 const int dy[3] = {-1, 0, 1};
 
-int input_check(string s);
+int board_size_check(string s);
 void init_board(t_board &board);
 void print_board(t_board &board);
 int run(t_board &board);
 int input_check_player(int i, int j, t_board &board);
 int board_check(int i, int j, t_board &board);
+int is_number(string s);
 #endif

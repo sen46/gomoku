@@ -1,4 +1,4 @@
-#include "gomoku.h"
+#include "../includes/gomoku.h"
 
 void print_board(t_board &board)
 {

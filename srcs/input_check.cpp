@@ -1,6 +1,6 @@
-#include "gomoku.h"
+#include "../includes/gomoku.h"
 
-int input_check(string s)
+int board_size_check(string s)
 {
     int n = s.size();
     for (int i = 0; i < n; i++)
@@ -13,7 +13,7 @@ int input_check(string s)
     }
 
     n = stoi(s);
-    if (n > 20)
+    if (n > 40)
     {
         cout << "盤面が大きすぎます。" << endl;
         return (0);
@@ -32,6 +32,18 @@ int input_check_player(int i, int j, t_board &board)
     {
         cout << "そのマスはすでに埋められています。\n";
         return (0);
+    }
+    return (1);
+}
+
+int is_number(string s)
+{
+    for (int i = 0; i < (int)s.size(); i++)
+    {
+        if (s[i] < '0' || s[i] > '9')
+        {
+            return (0);
+        }
     }
     return (1);
 }

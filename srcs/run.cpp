@@ -1,4 +1,4 @@
-#include "gomoku.h"
+#include "../includes/gomoku.h"
 
 int run(t_board &board)
 {
@@ -7,15 +7,25 @@ int run(t_board &board)
     while (true)
     {
         if (flag)
-            cout << "player1 の番です。\n";
+            cout << board.player1;
         else
-            cout << "player2 の番です。\n";        
-        int i = -1, j = -1;
+            cout << board.player2;        
+        cout << "の番です。数字を２つ入力してください\n";
+        int i, j;
+        string s, t;
         do 
         {
-            cin >> i >> j;
-            i--;
-            j--;
+            do 
+            {
+                cin >> s >> t;
+                if (!is_number(s) || !is_number(t))
+                {
+                    cout << "正しい数字を入力してください。\n";
+                }
+            } while (!is_number(s) || !is_number(t));
+
+            i = stoi(s) - 1;
+            j = stoi(t) - 1;
         } while (!input_check_player(i, j, board));
 
         if (flag) board.map[i][j] = 'o';

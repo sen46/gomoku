@@ -1,4 +1,4 @@
-#include "gomoku.h"
+#include "../includes/gomoku.h"
 
 int board_check(int i, int j, t_board &board)
 {
